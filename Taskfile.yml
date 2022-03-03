@@ -1,0 +1,22 @@
+version: '3'
+
+tasks:
+  build:
+    desc: 'Build php-fpm container'
+    cmds:
+      - docker-compose build
+
+  up:
+    desc: 'Up all containers'
+    cmds:
+      - docker-compose up -d
+
+  down:
+    desc: 'Down all containers'
+    cmds:
+      - docker-compose down
+
+  sh:
+    desc: 'Jump into application container'
+    cmds:
+      - docker exec -u www-data -it reports_php_fpm sh
