@@ -10,6 +10,6 @@ class ReportFileTypeAssembler implements ReportFileTypeAssemblerInterface
 {
     public function assemble(array $data): ReportFileType
     {
-        return new ReportFileType($data['reportFileType'] ?? null);
+        return new ReportFileType($data['reportFileType'] ?? '');
     }
 }

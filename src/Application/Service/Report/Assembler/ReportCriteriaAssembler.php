@@ -19,7 +19,7 @@ class ReportCriteriaAssembler implements ReportCriteriaAssemblerInterface
 
     public function assemble(array $data): ReportCriteria
     {
-        $reportType = new ReportType($data['reportType'] ?? null);
+        $reportType = new ReportType($data['reportType'] ?? '');
         $criteria = $this->reportCriteriaResolver->resolve($reportType)->assemble($data);
 
         return new ReportCriteria(
